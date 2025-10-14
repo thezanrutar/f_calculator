@@ -1,2 +1,2 @@
-# f_calculator
+# Calculator
 Simple calculator
