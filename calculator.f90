@@ -1,13 +1,10 @@
 program calculator
   implicit none
-  character *1 :: method, num_type
+  character *1 :: method
   real :: first_num, second_num, answer
 
   print *, "Choose a method (+, -, *, /, m, e) "
   read *, method
-
-  print *, "Choose a method (i, d) "
-  read *, num_type
 
   print *, "First number "
   read *, first_num
