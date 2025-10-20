@@ -30,6 +30,9 @@ program calculator
     print *, "Invalid method."
     stop
   end select
+  
+  read *, method
+
   end do
 
   print "(a8, 1f16.4)", "Answer: ", answer
