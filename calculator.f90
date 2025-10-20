@@ -1,37 +1,39 @@
 program calculator
   implicit none
   character *1 :: method
-  real :: first_num, second_num, answer
+  real :: num, answer
 
-  print *, "Choose a method (+, -, *, /, m, e) "
+  read *, answer
   read *, method
 
-  print *, "First number "
-  read *, first_num
-  print *, "Second number "
-  read *, second_num
+  do while (method /= "=")
+  read *, num
 
   select case(method)
   case("+")
-    answer = first_num + second_num
+    answer = answer + num
   case("-")
-    answer = first_num - second_num
+    answer = answer - num
   case("*")
-    answer = first_num * second_num
+    answer = answer * num
   case("/")
-    if (second_num == 0) then
+    if (num == 0) then
       print *, "Division by 0 is not possible."
       stop
     end if
-    answer = first_num / second_num
-  case("m")
-    answer = mod(first_num, second_num)
-  case("e")
-    answer = first_num ** second_num
+    answer = answer / num
+  case("%")
+    answer = mod(answer, num)
+  case("^")
+    answer = answer ** num
   case default
     print *, "Invalid method."
     stop
   end select
+  
+  read *, method
+
+  end do
 
   print "(a8, 1f16.4)", "Answer: ", answer
 end program calculator
