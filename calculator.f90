@@ -4,7 +4,7 @@ program calculator
   real :: num, answer
 
   read *, answer
-  read *, method
+  read (*, '(A)') method
 
   do while (method /= "=")
   read *, num
@@ -31,7 +31,7 @@ program calculator
     stop
   end select
   
-  read *, method
+  read (*, '(A)') method
 
   end do
 
