@@ -1,5 +1,5 @@
 # Calculator
-Simple calculator
+Simple calculator written in Fortran .f90.
 
 It supports floating point operations and can do multiple operations in a row.
 But it does not look at the correct order of operations.
